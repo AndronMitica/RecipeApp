@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .recipe-details {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .recipe-label {
+            font-weight: bold;
+        }
+        .recipe-description {
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+<h1>Recipe Details</h1>
+<div class="recipe-details">
+    <p class="recipe-label">Recipe Title:</p>
+    <p id="recipeTitle">Sample Recipe</p>
+
+    <p class="recipe-label">Ingredients:</p>
+    <p id="ingredients">Ingredient 1, Ingredient 2, Ingredient 3</p>
+
+    <p class="recipe-label">Description:</p>
+    <p class="recipe-description" id="description">This is a sample recipe description.</p>
+
+    <p class="recipe-label">Preparation Steps:</p>
+    <p class="recipe-description" id="preparationSteps">1. Step 1\n2. Step 2\n3. Step 3</p>
+
+    <p class="recipe-label">Cooking Time:</p>
+    <p id="cookingTime">30 minutes</p>
+</div>
+
+<script>
+        // Replace these values with your saved recipe data
+        const savedRecipe = {
+            recipeTitle: "Sample Recipe",
+            ingredients: "Ingredient 1, Ingredient 2, Ingredient 3",
+            description: "This is a sample recipe description.",
+            preparationSteps: "1. Step 1\n2. Step 2\n3. Step 3",
+            cookingTime: "30 minutes"
+        };
+
+        // Populate the HTML elements with recipe data
+        document.getElementById("recipeTitle").textContent = savedRecipe.recipeTitle;
+        document.getElementById("ingredients").textContent = savedRecipe.ingredients;
+        document.getElementById("description").textContent = savedRecipe.description;
+        document.getElementById("preparationSteps").textContent = savedRecipe.preparationSteps;
+        document.getElementById("cookingTime").textContent = savedRecipe.cookingTime;
+    </script>
+</body>
+</html>
